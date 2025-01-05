@@ -1,13 +1,39 @@
+:root {
+  --primary-color: #ffab00;
+  --background-color: #f5f5f5;
+  --text-color: #2c2c2c; /* Mørk grå farge */
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #f8f9fa !important;
+  background-color: var(--background-color) !important;
+  margin: 0;
+  padding: 0;
 }
 
 .uk-navbar-container {
-  background-color: #f8f9fa !important;
+  /* background-color: #f8f9fa !important; */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: transparent !important;
+}
+
+.uk-navbar-container a {
+  color: var(--text-color) !important;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, transform 0.15s ease-in-out !important;
+}
+
+.uk-navbar-container a:hover {
+  color: var(--primary-color) !important;
+  transform: scale(1.1);
 }
 
 header {
@@ -16,7 +42,7 @@ header {
   align-items: flex-start;
   justify-content: center;
   min-height: 50rem;
-  padding: 20px 50px;
+  padding: 0px 50px;
   box-sizing: border-box;
 
   position: relative;
@@ -37,8 +63,9 @@ header::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 
-  filter: blur(2px);
+  filter: grayscale(100%);
 }
 
 header h1,
@@ -53,20 +80,20 @@ header p {
 }
 
 .quote {
-  font-family: Georgia, serif; /* Endre fonten her */
-  font-style: italic; /* Gjør teksten italic */
-  font-size: 2.5em; /* Forstørr fonten litt */
-  color: #555; /* En subtil gråfarge */
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 2.5em;
+  color: var(--primary-color) !important;
   margin: 20px 0;
-  max-width: 80%; /* Begrens bredden på sitatet */
-  border-left: 3px solid #eea4e6;
+  max-width: 80%;
+  border-left: 5px solid black;
   padding-left: 1rem;
 }
 
 .paragraph {
-  margin-top: 10px; /* Litt avstand fra sitatet */
-  font-size: 1.3em; /* Standard fontstørrelse */
-  color: #ebebeb; /* Litt mørkere tekstfarge */
+  margin-top: 10px;
+  font-size: 1.3em;
+  color: #ebebeb;
   max-width: 40%;
   text-align: left;
 }
