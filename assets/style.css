@@ -19,9 +19,32 @@ header {
   padding: 20px 50px;
   box-sizing: border-box;
 
-  background: #355c7d; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #4286f4, #356bc0, #2c65c2); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #4286f4, #356bc0, #2c65c2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: relative;
+  color: #fff;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("/assets/images/forside.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  filter: blur(2px);
+}
+
+header h1,
+header p {
+  position: relative;
+  z-index: 1;
 }
 
 .header-content {
@@ -36,14 +59,18 @@ header {
   color: #555; /* En subtil gråfarge */
   margin: 20px 0;
   max-width: 80%; /* Begrens bredden på sitatet */
-  border-left: 3px solid #1e87f0;
+  border-left: 3px solid #eea4e6;
   padding-left: 1rem;
 }
 
 .paragraph {
   margin-top: 10px; /* Litt avstand fra sitatet */
   font-size: 1.3em; /* Standard fontstørrelse */
-  color: #c6c6c6; /* Litt mørkere tekstfarge */
+  color: #ebebeb; /* Litt mørkere tekstfarge */
   max-width: 40%;
   text-align: left;
+}
+
+.mainFooter {
+  background-color: rgb(233, 236, 239) !important;
 }
