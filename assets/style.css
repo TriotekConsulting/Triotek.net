@@ -2,6 +2,14 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #f8f9fa !important;
+}
+
+.uk-navbar-container {
+  background-color: #f8f9fa !important;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -12,8 +20,8 @@ header {
   box-sizing: border-box;
 
   background: #355c7d; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #355c7d, #6c5b7b, #c06c84); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #4286f4, #356bc0, #2c65c2); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4286f4, #356bc0, #2c65c2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .header-content {
