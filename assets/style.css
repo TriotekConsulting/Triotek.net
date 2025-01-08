@@ -164,6 +164,12 @@ header p {
   animation: bounce 2s infinite;
 }
 
+[data-aos] {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
 @keyframes bounce {
   0%,
   100% {
