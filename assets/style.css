@@ -41,6 +41,8 @@ header {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  height: 100vh; /* Full høyde av skjermen */
+  width: 100vw; /* Full bredde av skjermen */
   min-height: 50rem;
   padding: 0px 50px;
   box-sizing: border-box;
@@ -75,6 +77,7 @@ header p {
 }
 
 .header-content {
+  max-width: 100%;
   margin-left: 0rem;
   text-align: left;
 }
@@ -100,4 +103,72 @@ header p {
 
 .mainFooter {
   background-color: rgb(233, 236, 239) !important;
+}
+
+.custom-card {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.uk-card-icon {
+  font-size: 40px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.uk-card-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.uk-card-body p {
+  font-size: 14px;
+  color: #666;
+}
+
+.bigHeader {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.dark-section {
+  background-color: #d8d7d7; /* Mørk grå bakgrunn */
+  color: #000000;
+  padding: 60px 0; /* Luft over og under */
+  width: 100vw; /* Sørg for at seksjonen dekker hele bredden */
+  margin-left: calc(-50vw + 50%); /* Fjern marginer for å nå kantene */
+}
+
+.dark-section p,
+.dark-section h2,
+.dark-section blockquote {
+  color: #000000; /* Lys grå tekst for bedre lesbarhet */
+}
+
+.scroll-down-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-50%);
+  }
 }
