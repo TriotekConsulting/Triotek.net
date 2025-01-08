@@ -78,8 +78,9 @@ header p {
 
 .header-content {
   max-width: 100%;
-  margin-left: 0rem;
+  margin-left: rem;
   text-align: left;
+  padding-left: 8rem !important;
 }
 
 .quote {
