@@ -29,6 +29,8 @@ body {
 }
 
 .uk-navbar-container a {
+  font-size: 1rem !important;
+  font-weight: bold;
   color: var(--text-color) !important;
   text-decoration: none;
   transition: color 0.5s ease-in-out;
@@ -179,17 +181,17 @@ button:hover::before {
 }
 
 .dark-section {
-  background-color: #d8d7d7; /* Mørk grå bakgrunn */
+  background-color: #d8d7d7;
   color: #000000;
-  padding: 60px 0; /* Luft over og under */
-  width: 100vw; /* Sørg for at seksjonen dekker hele bredden */
-  margin-left: calc(-50vw + 50%); /* Fjern marginer for å nå kantene */
+  padding: 60px 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .dark-section p,
 .dark-section h2,
 .dark-section blockquote {
-  color: #000000; /* Lys grå tekst for bedre lesbarhet */
+  color: #000000;
 }
 
 .scroll-down-indicator {
@@ -201,6 +203,10 @@ button:hover::before {
   color: var(--primary-color);
   cursor: pointer;
   animation: bounce 2s infinite;
+}
+
+.uk-hidden {
+  display: none !important;
 }
 
 [data-aos] {

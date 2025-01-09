@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  emailjs.init("R4rsFxm-pE_aCZCHs");
-
   const form = document.getElementById("consultation-form");
   const thankYouMessage = document.getElementById("thank-you-message");
+
+  emailjs.init("R4rsFxm-pE_aCZCHs");
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
+
+    console.log("Sender e-post...");
 
     emailjs
       .send("service_3d3a7h4", "template_2aap4hi", {
@@ -36,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         function (error) {
           console.error("Feil ved sending av e-post:", error);
-          alert("Det oppsto en feil. Vennligst prøv igjen senere.");
+          alert("Det oppsto en feil under sending av e-posten. Vennligst prøv igjen senere.");
         }
       );
 

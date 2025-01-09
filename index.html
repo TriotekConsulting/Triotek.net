@@ -41,7 +41,7 @@
             <div class="uk-navbar-center-left">
               <ul class="uk-navbar-nav">
                 <li class="uk-active"><a href="#hjem">Hjem</a></li>
-                <li><a href="#tjenester">Tjenester</a></li>
+                <li><a href="#hvem-er-vi">Hvem vi er</a></li>
               </ul>
             </div>
             <a class="uk-navbar-item uk-logo" href="#">
@@ -49,8 +49,8 @@
             </a>
             <div class="uk-navbar-center-right">
               <ul class="uk-navbar-nav">
+                <li><a href="#hva-vi-kan">Hva vi kan</a></li>
                 <li><a href="#konsultasjon">Konsultasjon</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
               </ul>
             </div>
           </div>
@@ -61,13 +61,25 @@
     <div id="mobile-menu" uk-offcanvas>
       <div class="uk-offcanvas-bar">
         <ul class="uk-nav uk-nav-default">
-          <li class="uk-active"><a href="#hjem">Hjem</a></li>
-          <li><a href="#tjenester">Tjenester</a></li>
-          <li><a href="#konsultasjon">Konsultasjon</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
+          <li class="uk-active">
+            <a href="#hjem"><i class="fa-solid fa-house"></i>Hjem</a>
+          </li>
+          <li>
+            <a href="#hvem-er-vi"><i class="fa-solid fa-tools"></i> Hvem vi er</a>
+          </li>
+          <li>
+            <a href="#hva-vi-kan"><i class="fa-solid fa-handshake"></i>Hva vi kan</a>
+          </li>
+          <li>
+            <a href="#konsultasjon"><i class="fa-solid fa-envelope"></i>Konsultasjon</a>
+          </li>
         </ul>
       </div>
     </div>
+
+    <!-- ______________________________________________ -->
+    <!-- __________________Header______________________ -->
+    <!-- ______________________________________________ -->
 
     <header class="header-content uk-light uk-padding" id="hjem">
       <h1 data-aos="fade-down" class="quote">"Fra idé til virkelighet – vi er med hele veien."</h1>
@@ -78,6 +90,10 @@
 
       <button class="CTA" uk-toggle="target: #consultation-modal">Bestill Konsultasjon</button>
     </header>
+
+    <!-- ______________________________________________ -->
+    <!-- __________________Hvem er vi__________________ -->
+    <!-- ______________________________________________ -->
 
     <section id="hvem-er-vi" class="uk-section uk-section-default uk-padding-large" data-aos="fade-up">
       <div class="uk-container">
@@ -126,10 +142,14 @@
 
     <hr class="uk-divider-icon" />
 
+    <!-- ______________________________________________ -->
+    <!-- __________________Hva vi kan__________________ -->
+    <!-- ______________________________________________ -->
+
     <main class="container my-5">
-      <section id="tjenester">
+      <section id="hva-vi-kan">
         <h1 data-aos="fade-up" class="uk-text-center bigHeader">Hva vi kan</h1>
-        <p data-aos="fade-up">
+        <p data-aos="fade-up" class="uk-text-center">
           Hos oss bygger vi morgendagens løsninger med ekspertise innen systemutvikling, design og integrasjon. Vårt mål er å skape teknologi som både
           er funksjonell og enkel å bruke.
         </p>
@@ -208,10 +228,14 @@
 
       <hr class="uk-divider-icon" />
 
-      <section id="konsultasjon" class="dark-section uk-section" data-aos="fade-up">
+      <!-- ______________________________________________ -->
+      <!-- __________________Konsultering________________ -->
+      <!-- ______________________________________________ -->
+
+      <section class="dark-section uk-section" data-aos="fade-up">
         <div class="uk-container">
           <div class="uk-text-center">
-            <h1 class="bigHeader">Konsultering</h1>
+            <h1 class="bigHeader" id="konsultasjon">Konsultasjon</h1>
             <p class="uk-text-lead">Utforsk mulighetene med en gratis og uforpliktende konsultasjonstime.</p>
           </div>
 
@@ -249,7 +273,7 @@
               <textarea id="message" class="uk-textarea" rows="5" placeholder="Hva ønsker du hjelp med?" required></textarea>
             </div>
 
-            <button type="submit" class="uk-button uk-button-primary uk-width-1-1 btnColor forespørsel</button>
+            <button type="submit" class="uk-button uk-button-primary uk-width-1-1 btnColor forespørsel">Send</button>
           </form>
 
           <div id="thank-you-message" class="uk-hidden">
@@ -260,7 +284,11 @@
 
       <hr class="uk-divider-icon" />
 
-      <section id="kontakt">
+      <!-- ______________________________________________ -->
+      <!-- __________________Footer______________________ -->
+      <!-- ______________________________________________ -->
+
+      <!-- <section id="kontakt">
         <h1 data-aos="fade-up" class="uk-text-center bigHeader">Kontakt oss</h1>
         <p data-aos="fade-up" class="uk-text-center">Ta kontakt med oss for en uforpliktende prat!</p>
       </section>
@@ -287,13 +315,16 @@
             </form>
           </div>
         </section>
-      </section>
+      </section> -->
     </main>
+
+    <!-- ______________________________________________ -->
+    <!-- __________________Footer______________________ -->
+    <!-- ______________________________________________ -->
 
     <footer class="uk-section uk-section-secondary uk-padding-large">
       <div class="uk-container">
         <div class="uk-grid-divider uk-child-width-1-3@m" uk-grid>
-          <!-- Logo and About -->
           <div>
             <img src="assets/images/triotek_black.png" alt="Triotek Logo" style="height: 4rem; margin-bottom: 1rem" class="invert-filter" />
             <p>
@@ -302,7 +333,6 @@
             </p>
           </div>
 
-          <!-- Quick Links -->
           <div>
             <h4>Snarveier</h4>
             <ul class="uk-list">
@@ -313,7 +343,6 @@
             </ul>
           </div>
 
-          <!-- Contact Info -->
           <div>
             <h4>Kontakt oss</h4>
             <p><i class="fa-solid fa-envelope"></i> <a href="mailto:post@triotek.net">post@triotek.net</a></p>
