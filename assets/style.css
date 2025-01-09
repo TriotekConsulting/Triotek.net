@@ -63,7 +63,7 @@ header::before {
 
   background-image: url("/assets/images/forside.png");
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   
@@ -251,7 +251,7 @@ header p {
   }
 
   header::before {
-    background-size:auto
+    background-size:cover
     background-attachment: scroll;
   }
 }
