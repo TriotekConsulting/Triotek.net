@@ -32,6 +32,8 @@
     <title>Triotek Consulting</title>
   </head>
   <body>
+    <div class="hamburger" uk-icon="icon: menu; ratio: 2" uk-toggle="target: #mobile-menu"></div>
+
     <nav class="uk-navbar-container" data-aos="fade-down">
       <div class="uk-container">
         <div uk-navbar>
@@ -55,6 +57,17 @@
         </div>
       </div>
     </nav>
+
+    <div id="mobile-menu" uk-offcanvas>
+      <div class="uk-offcanvas-bar">
+        <ul class="uk-nav uk-nav-default">
+          <li class="uk-active"><a href="#hjem">Hjem</a></li>
+          <li><a href="#tjenester">Tjenester</a></li>
+          <li><a href="#konsultasjon">Konsultasjon</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
 
     <header class="header-content uk-light uk-padding" id="hjem">
       <h1 data-aos="fade-down" class="quote">"Fra idé til virkelighet – vi er med hele veien."</h1>

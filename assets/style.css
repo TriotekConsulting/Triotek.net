@@ -67,7 +67,8 @@ header::before {
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  filter: grayscale(100%);
+  filter: grayscale(100%) blur(1px); /* Grayscale og blur-effekt */
+  transition: all 0.3s ease-in-out;
 }
 
 header h1,
@@ -100,6 +101,7 @@ header p {
   color: #ebebeb;
   max-width: 40%;
   text-align: left;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .mainFooter {
@@ -175,6 +177,23 @@ header p {
   transform: translateY(0);
 }
 
+.uk-offcanvas-bar {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-right: 3px solid rgba(0, 0, 0, 0.1); /* Diskret kantlinje */
+  box-shadow: none;
+}
+
+.uk-offcanvas-bar ul.uk-nav > li > a {
+  color: #333; /* Tekstfarge */
+  font-size: 1.8rem; /* Juster tekststørrelse */
+}
+
+.uk-offcanvas-bar ul.uk-nav > li > a:hover {
+  color: var(--primary-color); /* Hover-effekt */
+}
+
 @keyframes bounce {
   0%,
   100% {
@@ -182,5 +201,51 @@ header p {
   }
   50% {
     transform: translateY(-10px) translateX(-50%);
+  }
+}
+
+.hamburger {
+  display: none !important;
+  position: absolute; /* Sørg for at den er plassert riktig */
+  top: 20px; /* Juster etter ønsket posisjon */
+  left: 20px; /* Juster etter ønsket posisjon */
+  z-index: 1000; /* Sørg for at den vises over andre elementer */
+  font-size: 2rem; /* Juster størrelsen */
+  cursor: pointer; /* Legg til en pekende markør */
+  z-index: 1000;
+  color: var(--primary-color) !important;
+}
+
+@media (max-width: 768px) {
+  .uk-navbar-container {
+    display: none;
+  }
+
+  .hamburger {
+    display: block !important;
+  }
+
+  .quote {
+    font-size: 1.7em;
+
+    max-width: 100%;
+    border-left: 3px solid black;
+  }
+
+  .header-content {
+    max-width: 100%;
+    margin-left: rem;
+    text-align: left;
+    padding-left: 3rem !important;
+    padding-bottom: 15rem !important;
+  }
+
+  .paragraph {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #ebebeb;
+    max-width: 80%;
+    text-align: left;
+    padding-left: 3rem !important;
   }
 }
