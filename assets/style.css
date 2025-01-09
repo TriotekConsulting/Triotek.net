@@ -231,6 +231,21 @@ button:hover::before {
 .uk-offcanvas-bar ul.uk-nav > li > a {
   color: #333;
   font-size: 1.8rem;
+
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.uk-offcanvas-bar ul.uk-nav > li > a i {
+  min-width: 30px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.uk-offcanvas-bar ul.uk-nav > li > a span {
+  flex-grow: 1;
+  text-align: left;
 }
 
 .uk-offcanvas-bar ul.uk-nav > li > a:hover {
