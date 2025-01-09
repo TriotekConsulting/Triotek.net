@@ -165,9 +165,14 @@ header p {
 }
 
 [data-aos] {
-  opacity: 1;
+  opacity: 0;
   transform: none;
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @keyframes bounce {
