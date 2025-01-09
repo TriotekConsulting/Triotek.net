@@ -104,6 +104,40 @@ header p {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+.CTA {
+  margin-top: 5rem;
+  color: #ebebeb;
+  text-decoration: none;
+  font-size: 25px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  z-index: 1;
+  text-transform: uppercase;
+  border-left: 5px solid rgba(0, 0, 0, 1);
+  padding-left: 1rem;
+}
+
+.CTA::before {
+  margin-left: auto;
+}
+
+.CTA::after,
+button::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--primary-color);
+  display: block;
+  transition: 0.5s;
+}
+
+.CTA:hover::after,
+button:hover::before {
+  width: 100%;
+}
+
 .mainFooter {
   background-color: rgb(233, 236, 239) !important;
 }
@@ -181,13 +215,13 @@ header p {
   background: rgba(255, 255, 255, 0.1) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-right: 3px solid rgba(0, 0, 0, 0.1); /* Diskret kantlinje */
+  border-right: 3px solid rgba(0, 0, 0, 0.1);
   box-shadow: none;
 }
 
 .uk-offcanvas-bar ul.uk-nav > li > a {
-  color: #333; /* Tekstfarge */
-  font-size: 1.8rem; /* Juster tekststørrelse */
+  color: #333;
+  font-size: 1.8rem;
 }
 
 .uk-offcanvas-bar ul.uk-nav > li > a:hover {
@@ -252,5 +286,9 @@ header p {
   header::before {
     background-size: cover;
     background-attachment: scroll;
+  }
+
+  .CTA {
+    display: none;
   }
 }
