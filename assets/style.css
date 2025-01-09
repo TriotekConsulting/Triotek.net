@@ -41,8 +41,8 @@ header {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  height: 100vh; /* Full høyde av skjermen */
-  width: 100vw; /* Full bredde av skjermen */
+  height: 100vh;
+  width: 100vw;
   min-height: 50rem;
   padding: 0px 50px;
   box-sizing: border-box;
@@ -63,11 +63,12 @@ header::before {
 
   background-image: url("/assets/images/forside.png");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  
 
-  filter: grayscale(100%) blur(1px); /* Grayscale og blur-effekt */
+  filter: grayscale(100%) blur(1px) brightness(0.7);
   transition: all 0.3s ease-in-out;
 }
 
@@ -247,5 +248,10 @@ header p {
     max-width: 80%;
     text-align: left;
     padding-left: 3rem !important;
+  }
+
+  header::before {
+    background-size:auto
+    background-attachment: scroll;
   }
 }
